@@ -1,0 +1,309 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ hàng</title>
+    <link rel="icon" href="https://ledinhmmo.com/wp-content/uploads/2019/02/cropped-d-logo-design-png-2-3.png" type="image/x-icon" style="width: 60px;height:60px;"> 
+    <script src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
+    <link rel="stylesheet" href="./assets/css/share.css">
+    <link rel="stylesheet" href="./assets/css/cart.css">
+    <!--bootrap  -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/Domal/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/Domal/css/util.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/Domal/css/main.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="banner">
+         
+<div class="logo">🥾신발 가게👠</div>
+<div class="nav_bars">
+    <button class="show-menu" type="button"><i class="fas fa-bars"></button></i>
+</div>
+<div class="navgation javas-navgation">
+    <ul>
+        <li><a href="./index.html"><i class="fas fa-home"></i> Trang Chủ</a></li>
+        <li><a href="./hotbrand.html"><i class="fab fa-themeisle"></i> Hot Brand</a></li>
+        <li><a href="news.html"><i class="fas fa-newspaper"></i> Blog</a></li>
+        <li><a href="./cart.html"><i class="fas fa-cart-plus"></i> Giỏ Hàng</a></li>
+        <li class="js-log" style="font-size:18px;cursor:pointer;"><i class="far fa-user-circle"></i> Đăng Nhập</li>
+
+        <!-- search -->
+        <li class="searchs">
+            <form action="" method="get">
+                <div class="search-box">
+                    <div class="input-box" style="padding:8px;">
+                        <input name="search" type="text" title="Tìm kiếm" autocomplete="off" placeholder="Nhập tên giày...">
+                    </div>
+                    <div class="search-button">
+                        <button style="font-size:20px;"><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+            </form>
+        </li>
+    </ul>
+</div>
+<div class="nav_overlay"></div>
+        </div>
+        <!-- container -->
+        <div class="container">
+            <div class="cart-page-header">
+                <a href="#">🥾신발 가게👠 || Giỏ hàng</a>
+            </div>
+            <form action="" method="post" class="form-1">
+                <div class="row">
+                    <div class="col-md-4" style="font-size:16px">
+                        <h4>Thông Tin Khách Hàng</h4>
+                        <div class="form-group" style="margin-top: 10px;">
+                            <label for="fullname">Họ Tên:</label>
+                            <input style="text-transform:capitalize;" required="true" type="text" value="" class="form-control" name="fullname" id="fullname">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone_number">Sô Điện Thoại:</label>
+                            <input  type="text"   required="true"class="form-control" name="phone_number" id="phone_number">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input  type="email"  required="true" class="form-control" name="email" id="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Địa Chỉ:</label>
+                            <input style="text-transform:capitalize;" required="true"  type="text" class="form-control" name="address" id="address">
+                        </div>
+                        <div class="form-group">
+                            <label for="size">Size:</label>
+                            <select  required="true" id="size" name="size" class="form-control">
+                                <option value="">--- Lựa chọn size ---</option>
+                                <option value="38">38</option>
+                                <option value="39">39</option>
+                                <option value="40">40</option>
+                                <option value="41">41</option>
+                                <option value="42">42</option>
+                                <option value="43">43</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="pay">Phương thức thanh toán:</label>
+                            <select  required="true" id="pay" name="pay" class="form-control">
+                                <option value="">--- Phương thức thanh toán ---</option>
+                                <option value="Thanh toán trực tuyến">Thanh toán trực tuyến</option>
+                                <option value="Sau khi nhận hàng">Thanh toán sau khi nhận hàng</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <table class="table" style="font-size:16px;">
+                            <thead>
+                                <tr>
+                                    <th scope="col">STT</th>
+                                    <th scope="col">Hình Ảnh</th>
+                                    <th scope="col">Tên Sản Phẩm</th>
+                                    <th scope="col">Số lượng</th>
+                                    <th scope="col">Đơn Giá</th>
+                                    <th scope="col">Thành Tiền</th>
+                                    <th scope="col">Thao Tác</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                               
+                            </tbody>
+                        </table>
+                      
+                    </div>
+                    
+                    
+                    <!--Mobile-->
+                    
+                    <div class="col-md-6">
+                        <table class="" style="font-size:16px;">
+                            <thead>
+                                <tr>
+                                    <th scope="col" style="padding: 8px;">Tên Sản Phẩm</th>
+                                    <th scope="col" style="padding: 8px;" >Số lượng</th>
+                                    <th scope="col" style="padding: 8px;" >Đơn Giá</th>
+                                    <th scope="col" style="padding: 8px;" >Thao Tác</th>
+                                </tr>
+                            </thead>
+                            
+                        </table>
+                        <h4 style="color:orangered;display:flex;justify-content:end;
+                                font-weight:600;font-family:Arial, Helvetica, sans-serif;">
+                           
+                        </h4>
+                    </div>
+                         <!--End Mobile-->
+                    
+                    
+                </div>
+                <center>
+                    <button class="btn btn-success" style="margin:50px 20px;font-family:Arial, Helvetica, sans-serif;
+                        font-size:25px;" onclick="notification()">Đặt Hàng</button>
+                </center>
+            </form>
+        </div>
+        <!-- footer -->
+        <div class="footer">
+            <div class="list-services">
+                <div class="community">
+                    <h3 class="name-footer">CỘNG ĐỒNG CHÚNG TÔI</h3>
+                    <ul class="root">
+                        <li><a href="https://www.facebook.com/nguyenxunadona/">Facebook</a></li>
+                        <li><a href="https://www.instagram.com/doan_g09/">Instagram</a></li>
+                        <li><a href="https://www.tiktok.com/@doandc09?lang=vi-VN">Tiktok</a></li>
+                        <li><a href="https://www.youtube.com/channel/UCqSv0iJY9uzaBbKA4U812iQ">Youtube</a></li>
+                    </ul>
+                </div>
+                <div class="services">
+                    <h3 class="name-footer">DỊCH VỤ</h3>
+                    <ul class="root">
+                        <li><a href="">Dịch vụ chăm sóc, bảo hành giày</a></li>
+                        <li><a href="">Tạp chí</a></li>
+                        <li><a href="">Chương trình Khách Hàng Thân Thiết</a></li>
+                    </ul>
+                </div>
+                <div class="support">
+                    <h3 class="name-footer">HỖ TRỢ KHÁCH HÀNG</h3>
+                    <ul class="root">
+                        <li><a href="">Đổi trả 45 ngày</a></li>
+                        <li><a href="">Chính sách bảo hành</a></li>
+                        <li><a href="">Chính sách vận chuyển</a></li>
+                        <li><a href="">Phương thức thanh toán</a></li>
+                        <li><a href="">Điều khoản dịch vụ</a></li>
+                        <li><a href="">Chính sách quyền riêng tư</a></li>
+                    </ul>
+
+                </div>
+                <div class="place">
+                    <h3 class="name-footer">VỀ DONASHOP.COM</h3>
+                    <ul class="root">
+                        <li><a href="https://goo.gl/maps/tKRYxMgq4r2niybGA">Địa chỉ: 126 Mễ Trì Hạ,Nam Từ Liêm, Hà Nội</a></li>
+                        <li style="font-size: 16px;margin-top: 20px;color:#fff;"><a href="tel:0382795561">Hotline: 0382795561</a></li>
+                        <li style="font-size: 16px;margin-top: 20px;color:#fff;">Zalo: Nguyễn Xuân Đoàn</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <span class="text">Copyright ©2021 shopgiaydona.com . Mua giày, đến Sneaker DONA - Thiên đường hàng hiệu
+                chính hãng! </span>
+        </div>
+        <!--Login  -->
+        <div class="limiter">
+            <div class="container-login100">
+                <div class="wrap-login100 ">
+                    <form method="POST"class="login100-form validate-form js-container">
+                        <span class="login100-form-title p-b-43">
+                            Đăng nhập
+                        </span>
+                        <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+                            <input class="input100" type="text" name="email">
+                            <span class="focus-input100"></span>
+                            <span class="label-input100">Email</span>
+                        </div>
+                        <div class="wrap-input100 validate-input" data-validate="Password is required">
+                            <input class="input100" type="password" name="pass">
+                            <span class="focus-input100"></span>
+                            <span class="label-input100">Password</span>
+                        </div>
+                        <div class="flex-sb-m w-full p-t-3 p-b-32">
+                            <div class="contact100-form-checkbox">
+                                <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+                                <label class="label-checkbox100" for="ckb1">
+                                    Remember me
+                                </label>
+                            </div>
+                            <div>
+                                <a href="#" class="txt1">
+                                    Forgot Password?
+                                </a>
+                            </div>
+                        </div>
+                        <div class="container-login100-form-btn">
+                            <button class="login100-form-btn">
+                                Login
+                            </button>
+                        </div>
+    
+                        <div class="text-center p-t-46 p-b-20">
+                            <span class="txt2">
+                                Bạn chưa có tài khoải? Đăng ký <a href="./register.html" style="font-family: auto;">Tại
+                                    đây</a>
+                                <p>or sign up using</p>
+                            </span>
+                        </div>
+    
+                        <div class="login100-form-social flex-c-m">
+                            <a href="#" class="login100-form-social-item flex-c-m bg1 m-r-5">
+                                <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                            </a>
+    
+                            <a href="#" class="login100-form-social-item flex-c-m bg2 m-r-5">
+                                <i class="fab fa-twitter" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- delete sản phẩm -->
+    <script src="./assets/js/deleteCart.js"></script>
+    <!-- tang giam so luong -->
+    <script src="./assets/js/upAnddown.js"></script>
+    <!-- thông báo -->
+    <script src="./assets/js/notification.js"></script>
+    <!-- showMenu -->
+    <script src="./assets/js/showMenu.js"></script>
+    <!-- Showlogin -->
+    <script src="./assets/js/showLogin.js"></script>
+    <script>
+        let btnXemthem= document.querySelector('.login100-form-btn');
+       
+        btnXemthem.onclick = function() {
+          setTimeout(function(){
+              location.href = ("./index.html")
+          },1000)
+        }
+
+    </script>
+
+    <!-- Messenger Plugin chat Code -->
+    <div id="fb-root"></div>
+
+<!-- Your Plugin chat code -->
+<div id="fb-customer-chat" class="fb-customerchat">
+</div>
+
+<script>
+    var chatbox = document.getElementById('fb-customer-chat');
+    chatbox.setAttribute("page_id", "100622079202431");
+    chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+<!-- Your SDK code -->
+<script>
+    window.fbAsyncInit = function() {
+        FB.init({
+        xfbml            : true,
+        version          : 'v12.0'
+        });
+    };
+
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+.container {
+    margin-top:90px;
+    margin-bottom:90px;
+    min-height:calc(100vh - 410px);
+    justify-content: center;
+}
+.container a,h3,p{
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+
+}
+.index{
+    border-radius: 2px;
+    border: 1px solid #ececec;
+    background-color: #f7f7f7;
+    margin-bottom: 20px;
+}
+.index a{
+    font-size: 18px;
+}
+.text_index{
+    font-size: 18px;
+    line-height:50px;
+   
+}
