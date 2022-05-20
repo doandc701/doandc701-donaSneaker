@@ -44,6 +44,9 @@
     width: 100%;
     object-fit: cover;
 }
+.list-img .imgchild.active{
+    border: 2px solid orangered;
+}
 
 .parameter{
  
