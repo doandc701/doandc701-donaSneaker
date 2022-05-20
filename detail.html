@@ -13,28 +13,24 @@
     <link rel="icon" href="https://ledinhmmo.com/wp-content/uploads/2019/02/cropped-d-logo-design-png-2-3.png" type="image/x-icon" style="width: 60px;height:60px;"  />
     <title>신발 가게</title>
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="../assets/css/Domal/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-    <!-- <link rel="stylesheet" type="text/css" href="../assets/css/Domal/vendor/bootstrap/css/bootstrap.min.css"> -->
-    <link rel="stylesheet" type="text/css" href="../assets/css/Domal/css/util.css">
-    <link rel="stylesheet" type="text/css" href="../assets/css/Domal/css/main.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/Domal/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="./assets/css/Domal/vendor/bootstrap/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/Domal/css/util.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/Domal/css/main.css">
     <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
-    <!-- use vuejs -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
 </head>
 
 <body>
     <!-- popUp đặt hàng -->
-    <div class="modal" id="modal">
-        <div class="modal-header">
-            <div class="check">
-                <i class="fas fa-check"></i>
-            </div>
+    <div class="modal">
+      <div class="modal-header">
+        <div class="check">
+          <i class="fas fa-check"></i>
         </div>
-        <div class="modal-body">
-            Sản phẩm đã được thêm vào Giỏ Hàng
-        </div>
-
-        <div id="overlay"></div>
+      </div>
+      <div class="modal-body">Sản phẩm đã được thêm vào Giỏ Hàng</div>
     </div>
     <div class="main">
         <!-- banner -->
@@ -70,271 +66,268 @@
 <div class="nav_overlay"></div>
         </div>
         <!-- container -->
-        <div id="app" class="container">
-          <div class="detailproduce">
-            <div class="sp">
-              <div class="imgproduce">
-                <img v-bind:src="getProduct.src" />
-              </div>
-              <div class="list-img">
-                <div class="imgchild" 
-                  v-for="(item, index) in listImageChild " 
-                  v-on:click="handleClick(index)"
-                  v-bind:class="classActive(index)"
-                  v-bind:key="index"
-                >
-                  <img v-bind:src="item.src" alt="" />
-                </div>
-               
-              </div>
+        <div  class="container">
+        <div id="app" class="detailproduce">
+          <div class="sp">
+            <div class="imgproduce">
+              <img v-bind:src="getProduct.src" />
             </div>
-            <div class="parameter">
-              <div class="nav">
-                <a href="">Trang chủ</a>
-                <i>/</i>
-                <a href="">Giày Nam</a>
-                <i>/</i>
-                <a href=""
-                  >Giày Nam Timberland 6 Inch Premium Boots Wheat Nubuck</a
-                >
+            <div class="list-img">
+              <div class="imgchild" 
+                v-for="(item, index) in listImageChild " 
+                v-on:click="handleClick(index)"
+                v-bind:class="classActive(index)"
+                v-bind:key="index"
+            >
+              <img v-bind:src="item.src" alt="" />
+            </div>
+            </div>
+          </div>
+          <div class="parameter">
+            <div class="nav">
+              <a href="">Trang chủ</a>
+              <i>/</i>
+              <a href="">Giày Nam</a>
+              <i>/</i>
+              <a href=""
+                >Giày Nam Timberland 6 Inch Premium Boots Wheat Nubuck</a
+              >
+            </div>
+            <div class="summary-top">
+              <h1 class="namesp">Giày Nam Timberland 6 Inch Premium Boots Wheat Nubuck</h1>
+              <bdi>
+                <span class="price">5.890.000đ</span>
+              </bdi>
+              <div class="endow">
+                <p class="namewhat">VÌ SAO CHỌN shopgiaylala.com?</p>
+                <ul>
+                  <li>
+                    ✅&ensp;Tặng phiếu bảo hiểm giày và vệ sinh giày 6 tháng trị
+                    giá 500K
+                  </li>
+                  <li>
+                    <a href=""
+                      >✅&ensp;Mua tất giảm ngay 20% (click xem chi tiết)</a
+                    >
+                  </li>
+                  <li>
+                    ✅&ensp;Cam kết chính hãng 100%, phát hiện fake đền 2 lần
+                    giá trị đơn hàng
+                  </li>
+                  <li>
+                    <a href=""
+                      >✅&ensp;Miễn phí đổi trả 45 ngày (click xem chi tiết)</a
+                    >
+                  </li>
+                  <li>✅&ensp;Double Box kèm chống sốc khi giao hàng</li>
+                  <li>
+                    <a href=""
+                      >✅&ensp;Miễn phí bảo hành 1 năm trên toàn hệ thống (click
+                      xem chi tiết)</a
+                    >
+                  </li>
+                  <li>✅&ensp;Hỗ trợ trả góp, thanh toán qua thẻ online</li>
+                </ul>
               </div>
-              <div class="summary-top">
-                <h1 class="namesp">Giày Nam Timberland 6 Inch Premium Boots Wheat Nubuck</h1>
-                <bdi>
-                  <span class="price">5.890.000đ</span>
-                </bdi>
-                <div class="endow">
-                  <p class="namewhat">VÌ SAO CHỌN shopgiaylala.com?</p>
-                  <ul>
-                    <li>
-                      ✅&ensp;Tặng phiếu bảo hiểm giày và vệ sinh giày 6 tháng trị
-                      giá 500K
-                    </li>
-                    <li>
-                      <a href=""
-                        >✅&ensp;Mua tất giảm ngay 20% (click xem chi tiết)</a
-                      >
-                    </li>
-                    <li>
-                      ✅&ensp;Cam kết chính hãng 100%, phát hiện fake đền 2 lần
-                      giá trị đơn hàng
-                    </li>
-                    <li>
-                      <a href=""
-                        >✅&ensp;Miễn phí đổi trả 45 ngày (click xem chi tiết)</a
-                      >
-                    </li>
-                    <li>✅&ensp;Double Box kèm chống sốc khi giao hàng</li>
-                    <li>
-                      <a href=""
-                        >✅&ensp;Miễn phí bảo hành 1 năm trên toàn hệ thống (click
-                        xem chi tiết)</a
-                      >
-                    </li>
-                    <li>✅&ensp;Hỗ trợ trả góp, thanh toán qua thẻ online</li>
-                  </ul>
-                </div>
 
-                <div class="et-pro">
-                  <label class="UGW">Size </label>
-                  <div class="DUI">
-                    <button class="produce-variation">38</button>
-                    <button class="produce-variation">39</button>
-                    <button class="produce-variation">40</button>
-                    <button class="produce-variation">41</button>
-                    <button class="produce-variation">42</button>
-                    <button class="produce-variation">43</button>
-                  </div>
+              <div class="et-pro">
+                <label class="UGW">Size </label>
+                <div class="DUI">
+                  <button class="produce-variation">38</button>
+                  <button class="produce-variation">39</button>
+                  <button class="produce-variation">40</button>
+                  <button class="produce-variation">41</button>
+                  <button class="produce-variation">42</button>
+                  <button class="produce-variation">43</button>
                 </div>
+              </div>
 
-                <div class="et-op">
-                  <div class="UGW">Số lượng</div>
-                  <div class="op-quantity">
-                    <div class="input-quantity">
-                      <button class="increase" onclick="increase()">
-                        <i class="fas fa-minus"></i>
-                      </button>
-                      <input
-                        id="textbox"
-                        type="text"
-                        role="spinbutton"
-                        aria-valuenow="1"
-                        value="1"
-                        style="width: 50px; text-align: center"
-                      />
-                      <button class="reduction" onclick="reduction()">
-                        <i class="fas fa-plus"></i>
-                      </button>
-                    </div>
-                    <div v-if="getProduct.quantity > 0">{{ getProduct.quantity }} sản phẩm</div>
-                    <div v-if="getProduct.quantity <=0">Hết hàng</div>
-                  </div>
-                </div>
-
-                <div class="performer">
-                  <div class="perform">
-                    <button data-modal-target="#modal" class="btn-add">
-                      <i class="fas fa-cart-plus"></i> Thêm vào giỏ hàng
+              <div class="et-op">
+                <div class="UGW">Số lượng</div>
+                <div class="op-quantity">
+                  <div class="input-quantity">
+                    <button class="increase" onclick="increase()">
+                      <i class="fas fa-minus"></i>
                     </button>
-                    <div class="modal" id="modal">
-                      <div class="modal-header">
-                        <div class="check">
-                          <i class="fas fa-check"></i>
-                        </div>
-                      </div>
-                      <div class="modal-body">
-                        Sản phẩm đã được thêm vào Giỏ Hàng
-                      </div>
-
-                      <div id="overlay"></div>
-                    </div>
-                    <button class="btn-buying">Mua hàng</button>
+                    <input
+                      id="textbox"
+                      type="text"
+                      role="spinbutton"
+                      aria-valuenow="1"
+                      value="1"
+                      style="width: 50px; text-align: center"
+                    />
+                    <button class="reduction" onclick="reduction()">
+                      <i class="fas fa-plus"></i>
+                    </button>
                   </div>
+                  <div v-if="getProduct.quantity > 0">{{ getProduct.quantity }} sản phẩm</div>
+                  <div v-if="getProduct.quantity <=0">Hết hàng</div>
+                </div>
+              </div>
+
+              <div class="performer">
+                <div class="perform">
+                  <button class="btn-add">
+                    <i class="fas fa-cart-plus"></i> Thêm vào giỏ hàng
+                  </button>
+                  <div class="modal" >
+                    <div class="modal-header">
+                      <div class="check">
+                        <i class="fas fa-check"></i>
+                      </div>
+                    </div>
+                    <div class="modal-body">
+                      Sản phẩm đã được thêm vào Giỏ Hàng
+                    </div>
+                  </div>
+                  <button class="btn-buying">Mua hàng</button>
                 </div>
               </div>
             </div>
           </div>
-          <!-- Description -->
-          <div class="tabwc">
-            <div class="tabs">
-                <div class="list-item active">Mô tả </div>
-                <div class="list-item">Đánh giá</div>
-                <div class="line"></div>
-            </div>
         </div>
-        <div class="content">
-            <div class="tab-pand active">
-                <p class="nd">
-                  Nike Air Jordan 1 với lịch sử hơn 30 năm luôn được nhìn nhận như một
-                  trong những dòng sản phẩm thành công nhất của Nike. Nike Jordan 1
-                  luôn bán hết một cách nhanh chóng ngay từ khi ra mắt đến nay, luôn
-                  là sản phẩm được các tín đồ thời trang chú ý hàng đầu. Air Jordan
-                  được đặt dựa theo ngôi sao bóng rổ lừng danh Michael Jordan – huyền
-                  thoại của NBA.
-                </p>
-                <p class="nd">
-                  Có bao giờ bạn tự hỏi rằng tại sao Jordan 1 lại có sức hút như vậy?
-                  Tại sao Jordan 1 luôn sold out rất nhanh và có giá resell cao ngất
-                  ngưởng? Đó chính là “lịch sử”. Đây chính là đôi giày mang nhiều giá
-                  trị lịch sử nhất của Nike Jordan và luôn rất hyped kể từ khi được ra
-                  mắt. Sự ra đời của đôi giày này cũng chính là cột mốc đánh dấu sự ra
-                  đời của một dòng giày bóng rổ huyền thoại Nike Jordan.
-                </p>
-                <p class="nd">
-                  Ngày nay, Nike Jordan không chỉ có những đôi giày bóng rổ, nhắc đến
-                  giày sneakers cổ cao cá tính người ta vẫn sẽ nhớ ngay đến Nike Air
-                  Jordan 1.
-                </p>
-                <p class="nd">
-                  Nike Air Jordan 1 High FlyEase ‘Light Smoke Grey’ hiện đã có sẵn tại
-                  Sneaker Daily Shop với mức giá hấp dẫn, đừng bỏ lỡ cơ hội của mình
-                  nhé!
-                </p>
-                <p class="nd">
-                  Cập nhật nhanh nhất lịch ra mắt của các mẫu giày mới nhất và tin tức
-                  thời trang trong nước và trên thế giới bằng cách theo dõi Sneaker
-                  Daily trên Facebook hoặc Instagram.
-                </p>
-                <h3 style="height: 68px">
-                  Thông tin sản phẩm Giày Nike Air Jordan 1 High FlyEase ‘Light Smoke
-                  Grey’
-                </h3>
-                <p class="nd"><strong>Thời gian ra mắt:</strong></p>
-                <p class="nd"><strong>Thương hiệu:</strong></p>
-                <p class="nd"><strong>Thiết kế:</strong></p>
-            </div>
-            <div class="tab-pand">
-                <div class="product-reviews">
-                    
-                </div>
-                <div class="formFeedback">
-                    <div class="comment-btn">
-                        <span class="btn">Thêm đánh giá</span>
+        <!-- Description -->
+        <div class="tabwc">
+          <div class="tabs">
+              <div class="list-item active">Mô tả </div>
+              <div class="list-item">Đánh giá</div>
+              <div class="line"></div>
+          </div>
+      </div>
+      <div class="content">
+          <div class="tab-pand active">
+              <p class="nd">
+                Nike Air Jordan 1 với lịch sử hơn 30 năm luôn được nhìn nhận như một
+                trong những dòng sản phẩm thành công nhất của Nike. Nike Jordan 1
+                luôn bán hết một cách nhanh chóng ngay từ khi ra mắt đến nay, luôn
+                là sản phẩm được các tín đồ thời trang chú ý hàng đầu. Air Jordan
+                được đặt dựa theo ngôi sao bóng rổ lừng danh Michael Jordan – huyền
+                thoại của NBA.
+              </p>
+              <p class="nd">
+                Có bao giờ bạn tự hỏi rằng tại sao Jordan 1 lại có sức hút như vậy?
+                Tại sao Jordan 1 luôn sold out rất nhanh và có giá resell cao ngất
+                ngưởng? Đó chính là “lịch sử”. Đây chính là đôi giày mang nhiều giá
+                trị lịch sử nhất của Nike Jordan và luôn rất hyped kể từ khi được ra
+                mắt. Sự ra đời của đôi giày này cũng chính là cột mốc đánh dấu sự ra
+                đời của một dòng giày bóng rổ huyền thoại Nike Jordan.
+              </p>
+              <p class="nd">
+                Ngày nay, Nike Jordan không chỉ có những đôi giày bóng rổ, nhắc đến
+                giày sneakers cổ cao cá tính người ta vẫn sẽ nhớ ngay đến Nike Air
+                Jordan 1.
+              </p>
+              <p class="nd">
+                Nike Air Jordan 1 High FlyEase ‘Light Smoke Grey’ hiện đã có sẵn tại
+                Sneaker Daily Shop với mức giá hấp dẫn, đừng bỏ lỡ cơ hội của mình
+                nhé!
+              </p>
+              <p class="nd">
+                Cập nhật nhanh nhất lịch ra mắt của các mẫu giày mới nhất và tin tức
+                thời trang trong nước và trên thế giới bằng cách theo dõi Sneaker
+                Daily trên Facebook hoặc Instagram.
+              </p>
+              <h3 style="height: 68px">
+                Thông tin sản phẩm Giày Nike Air Jordan 1 High FlyEase ‘Light Smoke
+                Grey’
+              </h3>
+              <p class="nd"><strong>Thời gian ra mắt:</strong></p>
+              <p class="nd"><strong>Thương hiệu:</strong></p>
+              <p class="nd"><strong>Thiết kế:</strong></p>
+          </div>
+          <div class="tab-pand">
+              <div class="product-reviews">
+                  
+              </div>
+              <div class="formFeedback">
+                  <div class="comment-btn">
+                      <span class="btn">Thêm đánh giá</span>
+                  </div>
+                  
+                      <!-- form đánh giá -->
+                      <form action="./detail.html" class="form-Feedback" method="">
+                          <div class="inforFeedback">
+                              <div class="item-Feedback">
+                                  <input required="true" type="text" style="text-transform: capitalize;" name="name" class="form-control" placeholder="*Tên">
+                              </div>
+                              <div class="item-Feedback">
+                                  <input required="true" type="email" name="email" class="form-control" placeholder="*Email">
+                              </div>
+                          </div>
+                          <div class="text-Feedback">
+                              <textarea required="true" name="comment" id="" cols="30" rows="10" placeholder="*Nhận xét của bạn"></textarea>
+                          </div>
+                          
+                          <div class="send-Feedback">
+                              <button class="btn-Send">Gửi đi</button>
+                          </div>
+                      </form>
+              </div>
+            
+          </div>
+      </div>
+        <!--  -->
+        <!-- produce tương tự -->
+        <div class="produce-same">
+          <h2 class="text-h2">Sản phẩm tương tự</h2>
+          <div class="content-same">
+            <div class="list-same">
+              <div class="pr-same">
+                <div class="same">
+                  <a href="">
+                    <img src="./assets/image/sp/sp-same/sp1.png" alt="" />
+                    <div class="caption">
+                      <p class="name-same">
+                        Giày nữ Nike Air Force 1 Low ‘Stitched Canvas’
+                        CK6572-600
+                      </p>
+                      <span class="price-same">4.590.000d</span>
                     </div>
-                    
-                        <!-- form đánh giá -->
-                        <form action="./detail.html" class="form-Feedback" method="">
-                            <div class="inforFeedback">
-                                <div class="item-Feedback">
-                                    <input required="true" type="text" style="text-transform: capitalize;" name="name" class="form-control" placeholder="*Tên">
-                                </div>
-                                <div class="item-Feedback">
-                                    <input required="true" type="email" name="email" class="form-control" placeholder="*Email">
-                                </div>
-                            </div>
-                            <div class="text-Feedback">
-                                <textarea required="true" name="comment" id="" cols="30" rows="10" placeholder="*Nhận xét của bạn"></textarea>
-                            </div>
-                            
-                            <div class="send-Feedback">
-                                <button class="btn-Send">Gửi đi</button>
-                            </div>
-                        </form>
+                  </a>
                 </div>
-              
-            </div>
-        </div>
-          <!--  -->
-          <!-- produce tương tự -->
-          <div class="produce-same">
-            <h2 class="text-h2">Sản phẩm tương tự</h2>
-            <div class="content-same">
-              <div class="list-same">
-                <div class="pr-same">
-                  <div class="same">
-                    <a href="">
-                      <img src="./assets/image/sp/sp-same/sp1.png" alt="" />
-                      <div class="caption">
-                        <p class="name-same">
-                          Giày nữ Nike Air Force 1 Low ‘Stitched Canvas’
-                          CK6572-600
-                        </p>
-                        <span class="price-same">4.590.000d</span>
-                      </div>
-                    </a>
-                  </div>
 
-                  <div class="same">
-                    <a href="">
-                      <img src="./assets/image/sp/sp-same/sp2.png" alt="" />
-                      <div class="caption">
-                        <p class="name-same">
-                          Giày nam Nike Air Force 1 Pixel Particle Ghost Aqua
-                          CK6649-400
-                        </p>
-                        <span class="price-same">4.290.000₫</span>
-                      </div>
-                    </a>
-                  </div>
+                <div class="same">
+                  <a href="">
+                    <img src="./assets/image/sp/sp-same/sp2.png" alt="" />
+                    <div class="caption">
+                      <p class="name-same">
+                        Giày nam Nike Air Force 1 Pixel Particle Ghost Aqua
+                        CK6649-400
+                      </p>
+                      <span class="price-same">4.290.000₫</span>
+                    </div>
+                  </a>
+                </div>
 
-                  <div class="same">
-                    <a href="">
-                      <img src="./assets/image/sp/sp-same/sp3.png" alt="" />
-                      <div class="caption">
-                        <p class="name-same">
-                          Giày nam Nike Air Force 1 Pixel Particle Ghost Aqua
-                          CK6649-400
-                        </p>
-                        <span class="price-same">4.590.000d</span>
-                      </div>
-                    </a>
-                  </div>
+                <div class="same">
+                  <a href="">
+                    <img src="./assets/image/sp/sp-same/sp3.png" alt="" />
+                    <div class="caption">
+                      <p class="name-same">
+                        Giày nam Nike Air Force 1 Pixel Particle Ghost Aqua
+                        CK6649-400
+                      </p>
+                      <span class="price-same">4.590.000d</span>
+                    </div>
+                  </a>
+                </div>
 
-                  <div class="same">
-                    <a href="">
-                      <img src="./assets/image/sp/sp-same/sp4.png" alt="" />
-                      <div class="caption">
-                        <p class="name-same">
-                          Giày nữ Nike Air Force 1 Easter CW0367-100
-                        </p>
-                        <span class="price-same">4.290.000d</span>
-                      </div>
-                    </a>
-                  </div>
+                <div class="same">
+                  <a href="">
+                    <img src="./assets/image/sp/sp-same/sp4.png" alt="" />
+                    <div class="caption">
+                      <p class="name-same">
+                        Giày nữ Nike Air Force 1 Easter CW0367-100
+                      </p>
+                      <span class="price-same">4.290.000d</span>
+                    </div>
+                  </a>
                 </div>
               </div>
             </div>
           </div>
+        </div>
       </div>
 
         <!-- footer -->
@@ -448,38 +441,38 @@
 
 
 
-    <script src="../assets/css/Domal/vendor/jquery/jquery-3.2.1.min.js"></script>
+    <script src="./assets/css/Domal/vendor/jquery/jquery-3.2.1.min.js"></script>
     <!--===============================================================================================-->
-    <script src="../assets/css/Domal/vendor/animsition/js/animsition.min.js"></script>
+    <script src="./assets/css/Domal/vendor/animsition/js/animsition.min.js"></script>
     <!--===============================================================================================-->
-    <script src="../assets/css/Domal/vendor/bootstrap/js/popper.js"></script>
-    <script src="../assets/css/Domal/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./assets/css/Domal/vendor/bootstrap/js/popper.js"></script>
+    <script src="./assets/css/Domal/vendor/bootstrap/js/bootstrap.min.js"></script>
     <!--===============================================================================================-->
-    <script src="../assets/css/Domal/vendor/select2/select2.min.js"></script>
+    <script src="./assets/css/Domal/vendor/select2/select2.min.js"></script>
     <!--===============================================================================================-->
-    <script src="../assets/css/Domal/vendor/daterangepicker/moment.min.js"></script>
-    <script src="../assets/css/Domal/vendor/daterangepicker/daterangepicker.js"></script>
+    <script src="./assets/css/Domal/vendor/daterangepicker/moment.min.js"></script>
+    <script src="./assets/css/Domal/vendor/daterangepicker/daterangepicker.js"></script>
     <!--===============================================================================================-->
-    <script src="../assets/css/Domal/vendor/countdowntime/countdowntime.js"></script>
+    <script src="./assets/css/Domal/vendor/countdowntime/countdowntime.js"></script>
     <!--===============================================================================================-->
     <!-- scrollreveal -->
     <script src="https://unpkg.com/scrollreveal"></script>
     <!--===============================================================================================-->
-    <script src="../assets/css/Domal/js/main.js"></script>
+    <script src="./assets/css/Domal/js/main.js"></script>
 
 
     <!-- Showlogin -->
-    <script src="../assets/js/showlogin.js"></script>
+    <script src="./assets/js/showLogin.js"></script>
     <!-- tang giam so luong -->
-    <script src="../assets/js/updowndetail.js"></script>
+    <script src="./assets/js/updowndetail.js"></script>
 
     <!-- add giỏ hàng -->
-    <script src="../assets/js/addCart.js"></script>
+    <script src="./assets/js/addCart.js"></script>
 
     <!-- showMenu -->
-    <script src="../assets/js/showMenu.js"></script>
+    <script src="./assets/js/showMenu.js"></script>
 
-    <script src="../assets/js/popUp.js"></script>
+    <script src="./assets/js/popUp.js"></script>
 
     <!-- scrollrevealLeft -->
     <script>
@@ -526,10 +519,10 @@
     </script> -->
 
     <!-- sự kiện mô tả <=> đánh giá -->
-    <script src="../assets/js/description.js"></script>
+    <script src="./assets/js/description.js"></script>
 
     <!-- js show Feebback -->
-    <script src="../assets/js/showFeedback.js"></script>
+    <script src="./assets/js/showFeedback.js"></script>
 
     <!-- Messenger Plugin chat Code -->
     <div id="fb-root"></div>
@@ -561,39 +554,41 @@
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
 </script>
+
 <script>
- var vueInstance = new Vue({
-   el:'#app',
-   data:{
-     selectedProduct:0,
-     listImageChild:[
-       {id:1, src:'./assets/image/sp/botnam1.png',quantity:200 },
-       {id:2, src:'./assets/image/sp/giaynam2.jpg',quantity:500 },
-       {id:3, src:'./assets/image/sp/botnam2.png',quantity:100 },
-       {id:4, src:'./assets/image/sp/botnam3.jpg',quantity:0 },
-      
-     ]
-   },
-   methods:{
-    handleClick(index){
-      this.selectedProduct =index
+  var vueInstance = new Vue({
+    el:'#app',
+    data:{
+      selectedProduct:0,
+      listImageChild:[
+        {id:1, src:'./assets/image/sp/botnam1.png',quantity:200 },
+        {id:2, src:'./assets/image/sp/giaynam2.jpg',quantity:500 },
+        {id:3, src:'./assets/image/sp/botnam2.png',quantity:100 },
+        {id:4, src:'./assets/image/sp/botnam3.jpg',quantity:0 },
+       
+      ]
     },
-    classActive(index){
-      return{
-        active:this.selectedProduct === index
-      }
-    }
-   },
-   computed:{
+    methods:{
+     handleClick(index){
+       this.selectedProduct =index
+     },
+     classActive(index){
+       return{
+         active:this.selectedProduct === index
+       }
+     }
+    },
+    computed:{
+ 
+     getProduct(){
+       let index = this.selectedProduct;
+       return this.listImageChild[index];
+     }
+ 
+    },
+  })
+ </script>
 
-    getProduct(){
-      let index = this.selectedProduct;
-      return this.listImageChild[index];
-    }
-
-   },
- })
-</script>
 </body>
 
 
