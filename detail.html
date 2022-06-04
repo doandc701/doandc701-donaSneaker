@@ -18,8 +18,7 @@
     <link rel="stylesheet" type="text/css" href="./assets/css/Domal/css/util.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/Domal/css/main.css">
     <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-
+    
 </head>
 
 <body>
@@ -67,21 +66,21 @@
         </div>
         <!-- container -->
         <div  class="container">
-        <div id="app" class="detailproduce">
+        <div  class="detailproduce">
           <div class="sp">
-            <div class="imgproduce">
-              <img v-bind:src="getProduct.src" />
+            <div class="imgproduce" id="imgproduceParent">
+              <img src="./assets/image/sp/botnam1.png" />-----------------------
             </div>
             <div class="list-img">
               <div class="imgchild" 
-                v-for="(item, index) in listImageChild " 
-                v-on:click="handleClick(index)"
-                v-bind:class="classActive(index)"
-                v-bind:key="index"
-            >
-              <img v-bind:src="item.src" alt="" />
-            </div>
-            </div>
+                <img src="./assets/image/sp/giaynam2.jpg" alt="" />
+               </div>
+              <div class="imgchild" 
+                <img src="./assets/image/sp/botnam2.png" alt="" />
+               </div>
+            <div class="imgchild" 
+                <img src="./assets/image/sp/botnam3.jpg" alt="" />
+               </div>
           </div>
           <div class="parameter">
             <div class="nav">
@@ -474,6 +473,9 @@
 
     <script src="./assets/js/popUp.js"></script>
 
+    <!-- moveImageChildren -->
+    <script src="./assets/js/moveImageChildren.js"></script>
+
     <!-- scrollrevealLeft -->
     <script>
         var slideLeft = {
@@ -554,40 +556,6 @@
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
 </script>
-
-<script>
-  var vueInstance = new Vue({
-    el:'#app',
-    data:{
-      selectedProduct:0,
-      listImageChild:[
-        {id:1, src:'./assets/image/sp/botnam1.png',quantity:200 },
-        {id:2, src:'./assets/image/sp/giaynam2.jpg',quantity:500 },
-        {id:3, src:'./assets/image/sp/botnam2.png',quantity:100 },
-        {id:4, src:'./assets/image/sp/botnam3.jpg',quantity:0 },
-       
-      ]
-    },
-    methods:{
-     handleClick(index){
-       this.selectedProduct =index
-     },
-     classActive(index){
-       return{
-         active:this.selectedProduct === index
-       }
-     }
-    },
-    computed:{
- 
-     getProduct(){
-       let index = this.selectedProduct;
-       return this.listImageChild[index];
-     }
- 
-    },
-  })
- </script>
 
 </body>
 
